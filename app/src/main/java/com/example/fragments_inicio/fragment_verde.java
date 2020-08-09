@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 /**
@@ -26,6 +28,8 @@ public class fragment_verde extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    View vista;
+    Button btnVerde;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +68,16 @@ public class fragment_verde extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment_verde, container, false);
+        vista=inflater.inflate(R.layout.fragment_fragment_verde, container, false);
+        btnVerde=(Button)vista.findViewById(R.id.btnFragment);
+        btnVerde.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"Presiona",Toast.LENGTH_LONG).show();
+
+            }
+        });
+        return vista ;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
