@@ -18,27 +18,33 @@
        />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-        <fragment
-            android:id="@+id/fragrojo"
-            android:name="com.example.fragments_inicio.fragment_rojo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            tools:layout="@layout/fragment_fragment_rojo">
-
-        </fragment>
-        <fragment
-            android:id="@+id/fragverde"
-            android:name="com.example.fragments_inicio.fragment_verde"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROJO"
             android:layout_weight="1"
-            tools:layout="@layout/fragment_fragment_verde">
-
-        </fragment>
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VERDE"
+            android:layout_weight="1"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AZUL"
+            android:layout_weight="1"
+            android:onClick="onClick"/>
 
     </LinearLayout>
+ <FrameLayout
+     android:id="@+id/contenedorFragments"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"></FrameLayout>
 
 </LinearLayout>
